@@ -1,39 +1,17 @@
+import { useState } from 'react'
 import './App.css'
-import { useState } from 'react';
-
+import Modal from './Modal'
 
 function App() {
-  //열림 true
-  const [modal, setModal] = useState(false);
-
-  const foods = ['김밥', '만두', '순대'];
-
-  console.log(modal);
-
-  const Food = () => {
-    return (
-      foods.map(function (item) {
-        return <p>{item}</p>
-      })
-    )
-
-  }
-  const Modal = () => {
-    return (
-      <div className="modal">
-        <h2>모달창</h2>
-        <Food />
-        <button className="btn" onClick={() => { setModal(false); }}>닫기</button>
-      </div>
-    )
-  }
-
+  // true(열림),false(닫힘)
+  // 초기값 설정
+  const[modal,setModal] = new useState(false);
+  
   return (
     <>
-      <h1>App</h1>
-      {modal ? (<Modal />) : null}
-      <button onClick={() => { setModal(true); }}>모달창 열기</button>
-
+      <button onClick={()=>{setModal(true)}}>열기</button>
+      {/* modal 참이면 표시 */}
+      {modal ? <Modal setModal={setModal} /> : null}
     </>
   )
 }
