@@ -1,46 +1,37 @@
-import { useState } from 'react'
+import React from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const [tab, setTab] = new useState(0);
+  console.log('App 시작');
+  const [count, setCount] = useState(0);
+  const [color, setColor] = useState('#ccc');
+
+  const addCount = () => {
+    setCount(count + 1);
+  }
+
+  useEffect(() => {
+    //앱이 시작되면 실행
+    //count State가 업데이트되면 실행
+    console.log(`useEffect Update count :  ${count}`);
+  }, [count]);
+
+  const changeColor = (e) => {
+    console.log(e.target);
+    setColor(e.target.name)
+  }
 
   return (
     <>
       <h1>App</h1>
-      <p>Tab UI</p>
-      <div className='tab-ui'>
-        <div className='tab-group'>
-          <a style={tab === 0 ? {color:'white', background:'black'}:null} href="#tab1" onClick={()=>{setTab(0)}}>HTML</a>
-          <a style={tab === 1 ? {color:'white', background:'black'}:null} href="#tab1" onClick={()=>{setTab(1)}}>CSS</a>
-          <a style={tab === 2 ? {color:'white', background:'black'}:null} href="#tab1" onClick={()=>{setTab(2)}}>JavaScript</a>
-        </div>
-        <div className='tab-contents'>
-          {
-            tab === 0 ?
-              <article id='tab1'>
-                <h1>HTML</h1>
-                <p>Hyper Text Markup Language</p>
-              </article>
-              : null
-          }
-          {
-            tab === 1 ?
-              <article id='tab2'>
-                <h1>CSS</h1>
-                <p>Cascading Style Sheet</p>
-              </article>
-              : null
-          }
-          {
-            tab === 2 ?
-              <article id='tab3'>
-                <h1>JavaScript</h1>
-                <p>Web Programing Language</p>
-              </article>
-              : null
-          }
-        </div>
-      </div>
+      <p>{count}</p>
+      <button onClick={addCount}>button</button>
+      <h1>Color App</h1>
+      <div className='box' style={{background:color}}></div>
+      <button name='red' onClick={changeColor}>red</button>
+      <button name='green' onClick={changeColor}>green</button>
+      <button name='blue' onClick={changeColor}>blue</button>
     </>
   )
 }
