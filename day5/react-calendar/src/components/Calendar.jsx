@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 
 function Calendar() {
     // 날짜 조회하기
@@ -13,6 +14,9 @@ function Calendar() {
     // 달력에서 시작 할 위치(요일기준)
     let startDate = new Date(year, month, 1).getDay();
 
+    const calendar = () => {
+        console.log();
+    }
 
     return (
         <div className="calendar">
@@ -21,7 +25,15 @@ function Calendar() {
                 <span>{month + 1}월</span>
             </header>
             <main>
-                달력
+                <ul className="date">
+                    {
+                        Array(lastDate).fill().map(( _, i) => {                            
+                            return (
+                                <li key={i} >{i + 1}</li>
+                            )
+                        })
+                    }
+                </ul>
             </main>
         </div>
     )
