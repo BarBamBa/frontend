@@ -1,9 +1,14 @@
 #root { max-width:1280px; margin:0 auto; padding:2rem; text-align:center; display:flex; justify-content:center;}
 * {box-sizing:border-box;}
 ul {list-style-type:none; padding:0;}
-.calendar {background:#000; color:#fff; width:400px; padding:1rem; padding-top:2rem;}
-.calendar ul.date {display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr;}
-.calendar ul.date li {border-bottom:1px solid rgba(255,255,255,0.2); padding: 0.5em;}
+.calendar {background:#b9abab; color:black; width:400px; padding:1rem; padding-top:2rem;background-image: url('https://img.investchosun.com/site/data/img_dir/2022/12/22/2022122280203_0.png');background-size: 100% 100%;}
+.calendar ul.date {display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr;}
+.calendar ul.date li {padding: 0.5em;font-weight: bold;}
 .calendar header {display:flex;}
 .calendar header h2 {font-size:40px; margin:0; line-height:40px; margin-right:1rem;}
-.calendar ul.date .today {border-radius:10px;}
+.calendar ul.date .today {border-radius:10px;background: red;}
+.calendar ul.date .holiday0 {color:red;}
+.calendar ul.date .holiday6 {color:blue;}
+.btn {margin:1rem; background: #37546b;}
+.title {color:green;font-weight: bold;}
