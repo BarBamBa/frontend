@@ -9,6 +9,7 @@ function App() {
     { name: '김삿갓', title: '세번째 글', like: 0 },
     { name: '홍길동', title: '네번째 글', like: 0 }
   ]);
+  
   const addLike = (e, item) => {
     console.log(e, item);
     let copy = [...post]

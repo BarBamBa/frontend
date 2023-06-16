@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.whitemode {
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+}
+.darkmode {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
