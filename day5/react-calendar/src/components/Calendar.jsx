@@ -27,9 +27,21 @@ function Calendar() {
             <main>
                 <ul className="date">
                     {
-                        Array(lastDate).fill().map(( _, i) => {                            
+                        Array(startDate).fill().map((_,i)=>{
                             return (
-                                <li key={i} >{i + 1}</li>
+                                <li key={i}></li>
+                            );
+                        })
+                    }
+                    {
+                        Array(lastDate).fill().map((_, i) => {                            
+                            return (
+                                <li
+                                className= {date === i + 1 ? 'today':''}
+                                style={{
+                                    background:date === i + 1 ? 'red':''}}
+                                key={i} >{i + 1}
+                                </li>
                             )
                         })
                     }

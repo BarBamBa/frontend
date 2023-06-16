@@ -6,3 +6,4 @@ ul {list-style-type:none; padding:0;}
 .calendar ul.date li {border-bottom:1px solid rgba(255,255,255,0.2); padding: 0.5em;}
 .calendar header {display:flex;}
 .calendar header h2 {font-size:40px; margin:0; line-height:40px; margin-right:1rem;}
+.calendar ul.date .today {border-radius:10px;}
