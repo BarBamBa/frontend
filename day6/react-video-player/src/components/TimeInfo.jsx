@@ -11,7 +11,6 @@ function TimeInfo(props) {
     <div className='timeInfo' >
         <p>{currentTime} / {duration}</p>
         <progress min='0' max='100' value={duration ? (currentTime * 100)/duration : 0} ></progress>
-        <p>ff</p>
     </div>
   )
 }
