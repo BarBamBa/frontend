@@ -1,0 +1,166 @@
+.App {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../public/img/bg.jpg'), #A5A5A5;
+}
+
+.saying {
+  position: absolute;
+  width: 588px;
+  height: 228px;
+  left: 122px;
+  top: 120px;
+
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 38px;
+  /* or 173% */
+  color: #FFFFFF;
+}
+
+.day {
+  position: absolute;
+  width: 200px;
+  height: 58px;
+  left: 122px;
+  top: 650.03px;
+
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 58px;
+  /* identical to box height */
+
+
+  color: #FFFFFF;
+}
+
+.date {
+  position: absolute;
+  width: 475px;
+  height: 251px;
+  left: 122px;
+  top: 590px;
+
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 251px;
+  /* identical to box height */
+  color: #FFFFFF;
+
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 10px;
+
+  position: absolute;
+  width: 227px;
+  height: 65px;
+  left: 1141px;
+  top: 811px;
+
+  background: #FFFFFF;
+  border-radius: 30px;
+  text-align: center;
+
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+
+
+  .App {
+    position: relative;
+    width: 320px;
+    height: 568px;
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../public/img/bg.jpg'), #A5A5A5;
+  }
+
+  .saying {
+    position: absolute;
+    width: 282px;
+    height: 207px;
+    left: 19px;
+    top: 237px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .day {
+    position: absolute;
+    width: 86px;
+    height: 34px;
+    left: 127px;
+    top: 43px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23.6975px;
+    line-height: 34px;
+
+    color: #FFFFFF;
+  }
+
+  .date {
+    position: absolute;
+    width: 247px;
+    height: 130px;
+    left: 63px;
+    top: 30.22px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 130px;
+
+    color: #FFFFFF;
+
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 12px;
+    gap: 10px;
+
+    position: absolute;
+    width: 177px;
+    height: 45px;
+    left: 72px;
+    top: 479px;
+
+    background: #FFFFFF;
+    border-radius: 30px;
+    text-align: center;
+  }
+
+
+}
