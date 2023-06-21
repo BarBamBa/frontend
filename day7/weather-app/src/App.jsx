@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Search from './components/Search';
 import Weather from './components/Weather';
+import.meta.env.VITE_API_KEY;
 
 function App() {
   const [location, setLocation] = useState(''); // 검색어
@@ -11,7 +12,7 @@ function App() {
   // 날씨 요청 함수
   const fetchWeather = () => {
 
-    const apiKey = 'fb5f98c3085239f4940351a66eba9b2d';
+    const apiKey = import.meta.env.VITE_API_KEY;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&lang=kr`;
 
     // AJAX 요청
@@ -42,10 +43,15 @@ function App() {
   // 검색 버튼 눌렀을 때
   const handleWeatherSearch = (e) => {
     // 전송 이벤트 취소(기본 이벤트)
-    e.preventDefault();
-    console.log('검색 호출');
-    // 날씨 데이터 요청
-    fetchWeather();
+    if (location == '') {
+      setError(true);
+    } else {
+      e.preventDefault();
+      console.log('검색 호출');
+      // 날씨 데이터 요청
+      fetchWeather();
+    }
+
   }
 
   return (

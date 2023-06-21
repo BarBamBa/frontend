@@ -8,21 +8,29 @@ function Search(props) {
         handleLocationChange
     } = props;
 
+    const EnterKeyPress = (e) => {
+        if (e.keyCode == 13) {
+            handleWeatherSearch;
+        }
+    }
+
+
     return (
-            <div className="input-group">
-                <input
-                    type="search"
-                    value={location}
-                    placeholder='위치를 입력'
-                    required
-                    onChange={handleLocationChange}
-                />
-                <button
-                    className='btn'
-                    type='submit'
-                    onClick={handleWeatherSearch}
-                >검색</button>
-            </div>
+        <div className="input-group">
+            <input
+                type="text"
+                value={location}
+                placeholder='위치를 입력'
+                required
+                onChange={handleLocationChange}
+                onKeyUp={EnterKeyPress}
+            />
+            <button
+                className='btn'
+                type='submit'
+                onClick={handleWeatherSearch}
+            >검색</button>
+        </div>
     )
 }
 

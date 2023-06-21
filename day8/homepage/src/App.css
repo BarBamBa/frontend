@@ -1,0 +1,15 @@
+body {margin:0px;}
+.Navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #1f2036;
+  height: 80px;
+}
+
+.Navbar .Nav-btn {
+  color: white;
+  margin-left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
