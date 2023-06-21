@@ -8,7 +8,7 @@ function Saying() {
     { saying: '티끌 모아 티끌', author: '박거성' }]
 
     const [idx, setIdx] = useState(0);
-    const [sayings, setSayings] = useState([{ saying: '111', author: 'kim' }]);
+    const [sayings, setSayings] = useState({ saying: '가는 말이 고우면 얕본다', author: '박명수' });
 
     // useEffect(() => {
     //     let sayingInt = setInterval(() => {
