@@ -12,7 +12,7 @@ function App() {
   const fetchWeather = () => {
 
     const apiKey = 'fb5f98c3085239f4940351a66eba9b2d';
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&lang=kr`;
 
     // AJAX 요청
     fetch(url)

@@ -9,6 +9,7 @@ function Weather(props) {
                     <div>
                         <h2>{weather.name}</h2>
                         <p>현재온도: {(weather.main.temp - 273.15).toFixed(1)}°C</p>
+                        <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} />
                         <p>설명: {weather.weather[0].description}</p>
                     </div>
                 ) : !error ?

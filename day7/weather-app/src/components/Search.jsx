@@ -9,7 +9,6 @@ function Search(props) {
     } = props;
 
     return (
-        <form onSubmit={handleWeatherSearch}>
             <div className="input-group">
                 <input
                     type="search"
@@ -21,9 +20,9 @@ function Search(props) {
                 <button
                     className='btn'
                     type='submit'
+                    onClick={handleWeatherSearch}
                 >검색</button>
             </div>
-        </form>
     )
 }
 

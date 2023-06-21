@@ -5,8 +5,17 @@
   text-align: center;
 }
 
+.App {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  max-width: 500px;
+  margin: auto;
+}
+
 .input-group {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .input-group input {
@@ -15,7 +24,6 @@
 }
 
 .input-group button {
-  position: absolute;
   top: 0px;
   width: 80px;
   height: 40px;
