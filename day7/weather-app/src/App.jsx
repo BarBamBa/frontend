@@ -6,7 +6,7 @@ import Weather from './components/Weather';
 function App() {
   const [location, setLocation] = useState(''); // 검색어
   const [weather, setWeather] = useState(null); // 날씨 데이터 null 값이 비었음을 명시적 선언
-  const [error, setError] = useState('검색어를 입력하세요');
+  const [error, setError] = useState(false);
 
   // 날씨 요청 함수
   const fetchWeather = () => {
@@ -21,7 +21,7 @@ function App() {
         // 검색 결과가 없을 때 
         if (data.cod === '404') {
           setWeather(null)
-          setError('올바른 지역명이 아닙니다');
+          setError(true);
           return;
         }
         setWeather(data);
