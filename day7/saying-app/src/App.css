@@ -1,22 +1,23 @@
 .App {
   position: relative;
-  width: 1440px;
-  height: 1024px;
+  width: 1320px;
+  height: 743px;
 
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../public/img/bg.jpg'), #A5A5A5;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../public/img/bg3.jpg'), #A5A5A5;
+  background-repeat: no-repeat;
 }
 
 .saying {
   position: absolute;
   width: 588px;
   height: 228px;
-  left: 122px;
-  top: 120px;
+  left: 100px;
+  top: 90px;
 
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 38px;
   /* or 173% */
   color: #FFFFFF;
@@ -26,8 +27,8 @@
   position: absolute;
   width: 200px;
   height: 58px;
-  left: 122px;
-  top: 650.03px;
+  left: 100px;
+  top: 460px;
 
   font-family: 'Noto Sans KR';
   font-style: normal;
@@ -44,13 +45,13 @@
   position: absolute;
   width: 475px;
   height: 251px;
-  left: 122px;
-  top: 590px;
+  left: 100px;
+  top: 400px;
 
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 700;
-  font-size: 150px;
+  font-size: 120px;
   line-height: 251px;
   /* identical to box height */
   color: #FFFFFF;
@@ -66,10 +67,10 @@
   gap: 10px;
 
   position: absolute;
-  width: 227px;
-  height: 65px;
-  left: 1141px;
-  top: 811px;
+  width: 187px;
+  height: 45px;
+  right: 100px;
+  top: 600px;
 
   background: #FFFFFF;
   border-radius: 30px;
@@ -90,8 +91,9 @@
     position: relative;
     width: 320px;
     height: 568px;
+    background-position: center;
 
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../public/img/bg.jpg'), #A5A5A5;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../public/img/bg1.jpg'), #A5A5A5;
   }
 
   .saying {
@@ -150,16 +152,14 @@
     align-items: center;
     padding: 10px 12px;
     gap: 10px;
-
     position: absolute;
-    width: 177px;
-    height: 45px;
-    left: 72px;
+    width: 127px;
+    height: 35px;
+    left: 100px;
     top: 479px;
 
     background: #FFFFFF;
     border-radius: 30px;
-    text-align: center;
   }
 
 
