@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import { Context } from '../context';
 
-function Main(props) {
-    let { darkmode } = props;
+function Main() {
+    const { darkmode } = useContext(Context);
 
     return (
         <section className={darkmode ? 'darkmode' : ''}>Main</section>

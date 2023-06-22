@@ -1,17 +1,15 @@
 import React, { useContext } from 'react'
+import { Context } from '../context';
 import Header from './Header';
 import Main from './Main';
 
-function Page(props) {
-  const {darkmode, handleDarkmode} = useContext(Context);
+function Page() {
+  const { darkmode, handleDarkmode } = useContext(Context);
 
   return (
-    <div className={ darkmode ? 'darkmode' : 'App'}>
-      <Header
-        darkmode={darkmode}
-        handleDarkmode={handleDarkmode}
-      />
-      <Main darkmode={darkmode} />
+    <div className={darkmode ? 'darkmode' : 'App'}>
+      <Header />
+      <Main />
     </div>
   )
 }

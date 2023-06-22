@@ -1,20 +1,15 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { MdDarkMode, MdOutlineDarkMode } from 'react-icons/md';
+import { Context } from '../context';
 
-function Header(props) {
-    let { darkmode, handleDarkmode } = props;
+function Header() {
+    const {darkmode, handleDarkmode} = useContext(Context);
     console.log(darkmode);
     return (
         <header>
-            <h1 className={
-                darkmode ? 'darkmode' : ''
-            }>Header</h1>
+            <h1 className={darkmode ? 'darkmode' : ''}>Header</h1>
             <button onClick={handleDarkmode}>
-
-                {darkmode ?
-                    <MdOutlineDarkMode />
-                    : <MdDarkMode />
-                }
+                {darkmode ? <MdOutlineDarkMode /> : <MdDarkMode />}
             </button>
         </header>
 
