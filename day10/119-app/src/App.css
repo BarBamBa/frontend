@@ -1,0 +1,47 @@
+body { margin: 0}
+
+.navbar {
+  height:80px;
+  display: flex;
+  align-items: center;
+  padding: 8px 24px;
+  background-color: rgb(66, 66, 116);
+}
+
+.logo {
+  font-size: 70px;
+  color: white
+}
+
+.navbar-menu {
+  display: flex;
+}
+.navbar-menu li {
+  color: white;
+  list-style: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.navbar-menu li:hover {
+  background-color: rgb(187, 140, 54);
+  border-radius: 6px;
+}
+
+button {
+  height: 50px;
+  width: 100px;
+  color: white;
+  background-color: rgb(66, 66, 116);
+  border: 1px solid white;
+}
+
+.data-container {
+  margin: 16px;
+}
+
+.items {
+  padding: 24px;
+  border: 1px solid #ccc;
+}
