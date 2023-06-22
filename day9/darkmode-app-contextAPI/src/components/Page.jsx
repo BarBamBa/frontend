@@ -6,7 +6,7 @@ function Page(props) {
   let { darkmode, handleDarkmode } = props;
 
   return (
-    <div className={ darkmode ? 'darkmode' : 'App'}>
+    <div className={darkmode ? 'darkmode' : 'App'}>
       <Header
         darkmode={darkmode}
         handleDarkmode={handleDarkmode}
