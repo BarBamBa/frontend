@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import Page from './components/Page'
+import { Context } from './context';
 import './App.css'
 
 function App() {
@@ -11,10 +12,10 @@ function App() {
 
   return (
     <>
-      <Page
-        darkmode={darkmode}
-        handleDarkmode={handleDarkmode}
-      />
+      <Context.Provider value={{darkmode, handleDarkmode}}>
+        <Page />
+      </Context.Provider>
+
     </>
   )
 }
